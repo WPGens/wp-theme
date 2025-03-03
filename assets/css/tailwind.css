@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html,
+	body {
+		@apply tw-font-open-sans tw-font-normal tw-text-base tw-leading-6 tw-text-secondary;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply tw-font-open-sans tw-mb-6;
+	}
+
+	a {
+		@apply tw-text-primary tw-no-underline tw-transition-colors tw-duration-200;
+	}
+
+	a:hover,
+	h2:hover a,
+	h3:hover a,
+	h4:hover a,
+	h5:hover a,
+	h6:hover a,
+	p:hover a {
+		@apply tw-text-primary-300;
+	}
+
+	p,
+	ul,
+	ol,
+	li {
+		@apply tw-m-0 tw-p-0 tw-text-base tw-leading-6;
+	}
+
+	.has-large-font-size {
+		@apply tw-leading-[30px];
+	}
+
+	.display-1 {
+		@apply tw-text-[56px] tw-leading-[60px] md:tw-text-[40px] md:tw-leading-[48px];
+	}
+
+	.display-2 {
+		@apply tw-text-[48px] tw-leading-[54px] md:tw-text-[37px] md:tw-leading-[42px];
+	}
+
+	.display-3 {
+		@apply tw-text-[42px] tw-leading-[48px] md:tw-text-[35px] md:tw-leading-[36px];
+	}
+
+	h1 {
+		@apply tw-text-[37px] tw-leading-[42px] md:tw-text-[32px] md:tw-leading-[36px];
+	}
+
+	h2 {
+		@apply tw-text-[32px] tw-leading-[36px] md:tw-text-[27px] md:tw-leading-[30px];
+	}
+
+	h3 {
+		@apply tw-text-[27px] tw-leading-[30px] tw-mb-[18px] md:tw-text-2xl md:tw-leading-[30px];
+	}
+
+	h4 {
+		@apply tw-text-2xl tw-leading-[30px] tw-mb-[18px] md:tw-text-[21px] md:tw-leading-6;
+	}
+
+	h5 {
+		@apply tw-text-[21px] tw-leading-6 md:tw-text-lg;
+	}
+
+	h6 {
+		@apply tw-text-lg tw-leading-6 md:tw-text-base md:tw-leading-[18px];
+	}
+}
+
+/* HELPER CLASSES */
+
+p {
+	margin-bottom: 18px;
+}
+
+.mb-12 {
+	margin-bottom: 12px;
+}
+
+.mb-18 {
+	margin-bottom: 18px;
+}
+
+.mb-24 {
+	margin-bottom: 24px;
+}
+
+.mb-42 {
+	margin-bottom: 42px;
+}
+
+.mb-48 {
+	margin-bottom: 48px;
+}
+
+.mb-72 {
+	margin-bottom: 72px;
+}
+.mb-96 {
+	margin-bottom: 96px;
+}
+
+.gap-96 {
+	gap: 96px !important;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.border-radius-6 {
+	border-radius: 6px;
+}
+
+.border-bottom {
+	border-bottom: 1px dashed #ccc;
+}
+
+.gap-12 {
+	gap: 12px !important;
+}
+
+.gap-24 {
+	gap: 24px !important;
+}
+
+.gap-48 {
+	gap: 48px !important;
+}
+
+.is-flex {
+	display: flex;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.h3 {
+	font-size: 27px;
+	line-height: 30px;
+	font-weight: 500;
+	font-family: "TheSerifB";
+}
+
+.h5 {
+	font-size: 21px;
+	line-height: 24px;
+	font-weight: 500;
+	font-family: "TheSerifB";
+	margin-bottom: 9px;
+}
+
+@media (max-width: 768px) {
+	.is-flex.stack-mobile {
+		flex-direction: column;
+		gap: 0px !important;
+	}
+	.text-right {
+		text-align: center;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+	.mb-96 {
+		margin-bottom: 48px;
+	}
+	.h3 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.h5 {
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 18px;
+	}
+	.mobile-text-center {
+		text-align: center;
+	}
+}
+
+/* RESET BLOG POSTS */
+
+.content p,
+.content ul,
+.content iframe,
+.content img,
+.content ol,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+	margin-bottom: 24px;
+	font-weight: 400;
+}
+.content ol,
+.content ul {
+	margin-left: 24px;
+}
+.content p {
+	font-size: 18px;
+}
+.content table a {
+	text-decoration: none;
+}
+.content h1 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.content h2 {
+	font-size: 1.75rem;
+	line-height: 2rem;
+	font-weight: 600;
+}
+
+.content h3 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+}
+
+.content h4 {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	font-weight: 600;
+}
+
+.content h5 {
+	font-size: 1rem;
+	line-height: 1.125rem;
+	font-weight: 600;
+}
+.content div div {
+	margin-top: 0 !important;
+	/* margin-bottom: 0 !important; */
+	font-size: inherit !important;
+	line-height: inherit !important;
+	font-weight: inherit !important;
+	max-width: 100% !important;
+}
+.content iframe {
+	width: 100%;
+	min-height: 360px;
+}

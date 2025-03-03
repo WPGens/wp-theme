@@ -1,0 +1,212 @@
+/* FILE EXPLANATION */
+/* This file will load style for blocks, it will load on both frontend and backend */
+
+:root {
+	--width-site: 1224px;
+	--width-site-small: 816px;
+	--side-margin: 24px;
+	--color-primary: #79ad36;
+	--color-secondary: #404041;
+	--color-primary-100: #f2f7eb;
+	--color-primary-200: #aad475;
+	--color-primary-300: #5e862a;
+	--color-primary-400: #435f1e;
+	--color-secondary-100: #f3f3f3;
+	--color-secondary-200: #c0c0c0;
+	--color-secondary-300: #8c8c8e;
+	--color-secondary-400: #59595b;
+	--color-secondary-500: #272727;
+}
+
+/* Background Colors */
+.has-primary-background-color {
+	background-color: var(--color-primary);
+}
+
+.has-secondary-background-color {
+	background-color: var(--color-secondary);
+}
+
+.has-primary-100-background-color {
+	background-color: var(--color-primary-100);
+}
+
+.has-primary-200-background-color {
+	background-color: var(--color-primary-200);
+}
+
+.has-primary-300-background-color {
+	background-color: var(--color-primary-300);
+}
+
+.has-primary-400-background-color {
+	background-color: var(--color-primary-400);
+}
+
+.has-secondary-100-background-color {
+	background-color: var(--color-secondary-100);
+}
+
+.has-secondary-200-background-color {
+	background-color: var(--color-secondary-200);
+}
+
+.has-secondary-300-background-color {
+	background-color: var(--color-secondary-300);
+}
+
+.has-secondary-400-background-color {
+	background-color: var(--color-secondary-400);
+}
+
+.has-secondary-500-background-color {
+	background-color: var(--color-secondary-500);
+}
+
+/* Text Colors */
+.has-primary-color {
+	color: var(--color-primary);
+}
+
+.has-secondary-color {
+	color: var(--color-secondary);
+}
+
+.has-primary-light-color {
+	color: var(--color-primary-200);
+}
+
+.has-primary-dark-color {
+	color: var(--color-primary-300);
+}
+
+.has-primary-darker-color {
+	color: var(--color-primary-400);
+}
+
+.has-secondary-100-color {
+	color: var(--color-secondary-100);
+}
+
+.has-secondary-200-color {
+	color: var(--color-secondary-200);
+}
+
+.has-secondary-300-color {
+	color: var(--color-secondary-300);
+}
+
+.has-secondary-400-color {
+	color: var(--color-secondary-400);
+}
+
+.has-secondary-500-color {
+	color: var(--color-secondary-500);
+}
+
+/* Fix Default Gutenberg styles */
+
+:where(.wp-block-columns) {
+	margin-bottom: 0;
+}
+.wp-block-image {
+	margin-bottom: 18px;
+}
+.wp-block-cover,
+.wp-block-cover-image {
+	padding: 0;
+}
+.wp-block-columns {
+	width: 100%;
+}
+.wp-block-group {
+	padding: 0;
+}
+.wp-block-image .alignleft {
+	margin: 0;
+}
+.wp-block-separator {
+	margin-top: 6px;
+}
+.wp-block-media-text__content h2,
+.wp-block-media-text__content h3 {
+	margin-bottom: 0;
+}
+.wp-block-cover__inner-container {
+	padding: 0 24px;
+}
+:where(.wp-block-columns.is-layout-flex) {
+	gap: 48px !important;
+}
+:where(.wp-block-columns.is-layout-flex.gap-24) {
+	gap: 24px !important;
+}
+.entry-content > .wp-block-group {
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
+.image-with-text .text-container h3 {
+	margin-bottom: 0;
+}
+
+/* When pargraph has inline image - add with-image class */
+.with-image img {
+	margin-left: 2px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+	.wp-block-columns .wp-block-column {
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+	}
+	.mobile-2-per-row.wp-block-columns:not(.is-not-stacked-on-mobile)
+		> .wp-block-column {
+		flex-basis: 40% !important;
+	}
+	.wp-block-heading br {
+		display: none;
+	}
+}
+
+/* Increase the width of blocks in the editor */
+
+.wp-block-group.is-style-full-width {
+	position: relative;
+	max-width: none;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+}
+.wp-block-group.is-style-container {
+	position: relative;
+	max-width: var(--width-site) !important;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+}
+.wp-block-group.is-style-small-container {
+	position: relative;
+	max-width: var(--width-site-small) !important;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+}
+
+@media screen and (max-width: 1280px) {
+	.wp-block-group.is-style-full-width {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.wp-block-columns.is-not-stacked-on-mobile {
+		flex-wrap: wrap !important;
+	}
+}

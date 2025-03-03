@@ -1,0 +1,19 @@
+{
+	"name": "wpgens-edd",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/theme.css --watch",
+		"build-prod": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/theme.css --minify",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.3.3",
+		"vite": "^4.4.9"
+	}
+}
