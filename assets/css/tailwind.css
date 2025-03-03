@@ -7,7 +7,7 @@
 @layer base {
 	html,
 	body {
-		@apply tw-font-open-sans tw-font-normal tw-text-base tw-leading-6 tw-text-secondary;
+		@apply tw-font-open-sans tw-font-normal tw-text-base tw-leading-6;
 	}
 
 	h1,
