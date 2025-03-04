@@ -18,7 +18,7 @@ get_header(); ?>
 		</div>
 		<?php endif; ?>
 
-		<div class="tw-prose tw-prose-lg tw-mx-auto tw-px-4 tw-py-12">
+		<div class="tw-prose tw-prose-lg tw-mx-auto tw-py-12">
 			<?php the_content(); ?>
 		</div>
 

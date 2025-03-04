@@ -592,7 +592,7 @@ a:hover,
 	h6:hover a,
 	p:hover a{
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 p,
@@ -833,20 +833,12 @@ tr:hover{
   max-width: 42rem;
 }
 
-.tw-max-w-none{
-  max-width: none;
-}
-
 .tw-flex-shrink-0{
   flex-shrink: 0;
 }
 
 .tw-flex-grow{
   flex-grow: 1;
-}
-
-.tw-border-collapse{
-  border-collapse: collapse;
 }
 
 .tw-grid-cols-1{
@@ -915,32 +907,13 @@ tr:hover{
   border-radius: 0.5rem;
 }
 
-.tw-border{
-  border-width: 1px;
-}
-
 .tw-border-t{
   border-top-width: 1px;
-}
-
-.tw-border-gray-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
 .tw-border-gray-800{
   --tw-border-opacity: 1;
   border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
-}
-
-.tw-bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
-.tw-bg-gray-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
 .tw-bg-gray-900{
@@ -976,11 +949,6 @@ tr:hover{
   padding-bottom: 3rem;
 }
 
-.tw-py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .tw-py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -988,10 +956,6 @@ tr:hover{
 
 .tw-pt-8{
   padding-top: 2rem;
-}
-
-.tw-text-left{
-  text-align: left;
 }
 
 .tw-text-center{
@@ -1266,11 +1230,6 @@ p {
 .content iframe {
   width: 100%;
   min-height: 360px;
-}
-
-.hover\:tw-bg-gray-50:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:tw-text-primary-300:hover{
