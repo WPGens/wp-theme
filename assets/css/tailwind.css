@@ -81,6 +81,30 @@
 	}
 }
 
+@layer components {
+	/* Default Table Styles */
+	table {
+		@apply tw-w-full tw-border-collapse tw-mb-6;
+	}
+
+	th,
+	td {
+		@apply tw-px-4 tw-py-2 tw-text-left tw-border tw-border-gray-200;
+	}
+
+	th {
+		@apply tw-bg-gray-100 tw-font-semibold;
+	}
+
+	tr:nth-child(even) {
+		@apply tw-bg-gray-50;
+	}
+
+	tr:hover {
+		@apply tw-bg-gray-100;
+	}
+}
+
 /* HELPER CLASSES */
 
 p {
