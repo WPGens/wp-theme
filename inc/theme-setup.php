@@ -31,8 +31,10 @@ if (!function_exists('wpgens_setup')):
         load_theme_textdomain('wpgens', get_template_directory() . '/languages');
 
         register_nav_menus(array(
-            'header-menu' => __('Header Menu', 'wpgens'),
-            'footer-menu' => __('Footer Menu'),
+            'primary' => __('Primary Menu', 'wpgens'),
+            'footer-1' => __('Footer Menu 1', 'wpgens'),
+            'footer-2' => __('Footer Menu 2', 'wpgens'),
+            'footer-3' => __('Footer Menu 3', 'wpgens'),
         ));
     }
 endif;

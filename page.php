@@ -1,25 +1,20 @@
 <?php get_header(); ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main gutenberg-page">
-        <?php
-        while (have_posts()) :
-            the_post();
-		?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<!-- <header class="entry-header">
-					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-				</header> -->
+<main class="tw-container tw-mx-auto tw-px-4 tw-py-12">
+	<?php while (have_posts()): the_post(); ?>
+	<article id="post-<?php the_ID(); ?>">
+		<?php if (has_post_thumbnail()): ?>
+		<div class="tw-mb-12">
+			<?php the_post_thumbnail('full', ['class' => 'tw-w-full tw-h-auto tw-rounded-lg']); ?>
+		</div>
+		<?php endif; ?>
 
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div>
-			</article>
-		<?php
-        endwhile;
-        ?>
-    </main>
-</div>
+		<div class="tw-prose tw-prose-lg tw-mx-auto">
+			<?php the_content(); ?>
+		</div>
 
-<?php
-get_footer();
+	</article>
+	<?php endwhile; ?>
+</main>
+
+<?php get_footer(); ?>

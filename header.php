@@ -3,10 +3,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/TheSerifB-W8ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/TheSerifB-W5Plain.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/TheSerifB-W7Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head(); ?>
 </head>
@@ -14,58 +11,51 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <?php
-    $current_site_id = get_current_blog_id();
-    $main_site_url = get_site_url(1); // Eng
-    $croatian_site_url = get_site_url(2); // Hr
-
-    if ($current_site_id == 1) {
-        $english_element = '<span class="current">English</span>';
-        $croatian_element = '<a href="' . esc_url($croatian_site_url) . '">Hrvatski</a>';
-    } else {
-        $english_element = '<a href="' . esc_url($main_site_url) . '">English</a>';
-        $croatian_element = '<span class="current">Hrvatski</span>';
-    }
-    ?>
-
-    <?php get_template_part('inc/google-tag-manager'); ?>
-
-    <header id="header" class="header">
-        <div class="header-grid">
-            <a class="header-logo" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" id="top-menu-item-logo"><?php bloginfo('name'); ?></a>
-
-            <nav id="js-menu" class="menu">
-                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu-list', 'container' => false)); ?>
-                <div class="header-lang header-lang--mobile">
-                    <span class="header-lang--title"><?php _e('Select language', 'wpgens'); ?></span>
-                    <?php echo $english_element; ?> | <?php echo $croatian_element; ?>
+    <header class="tw-bg-white tw-shadow-sm">
+        <div class="tw-container tw-mx-auto tw-px-4">
+            <div class="tw-flex tw-items-center tw-justify-between tw-h-20">
+                <!-- Logo -->
+                <div class="tw-flex-shrink-0">
+                    <?php if (has_custom_logo()): ?>
+                        <?php the_custom_logo(); ?>
+                    <?php else: ?>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="tw-text-2xl tw-font-bold">
+                            <?php bloginfo('name'); ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
-            </nav>
 
-            <button type="button" id="js-search-trigger" class="header-btn header-btn-search"><i class="icon-search"></i><span><?php _e('Search', 'wpgens'); ?></span></button>
+                <!-- Desktop Menu -->
+                <nav class="tw-hidden md:tw-flex tw-space-x-8">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'container' => false,
+                        'menu_class' => 'tw-flex tw-space-x-8',
+                        'fallback_cb' => false,
+                    ));
+                    ?>
+                </nav>
 
-            <div class="header-lang">
-                <span class="header-lang--title"><?php _e('Select language', 'wpgens'); ?></span>
-                <?php echo $english_element; ?> | <?php echo $croatian_element; ?>
+                <!-- Mobile Menu Button -->
+                <button class="md:tw-hidden" id="mobile-menu-button" aria-label="Toggle Menu">
+                    <svg class="tw-w-6 tw-h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
 
-            <button type="button" id="js-menu-trigger" class="header-btn header-btn-menu"><i class="icon-menu"></i><span><?php _e('Menu', 'wpgens'); ?></span></button>
-        </div>
-    </header>
-
-    <?php if (is_post_type_archive('post') || is_category() || is_singular('post') || is_home()) : ?>
-        <section class="category-list-section">
-            <div class="container">
+            <!-- Mobile Menu -->
+            <div class="tw-hidden md:tw-hidden" id="mobile-menu">
                 <?php
                 wp_nav_menu(array(
-                    'theme_location' => 'blog-menu',
-                    'menu_class'     => 'category-list',
+                    'theme_location' => 'primary',
+                    'container' => false,
+                    'menu_class' => 'tw-py-4 tw-space-y-4',
+                    'fallback_cb' => false,
                 ));
                 ?>
             </div>
-        </section>
-    <?php endif; ?>
-
-    <form class="search-form" role="search" method="get" id="js-search-form" action="<?php echo home_url('/'); ?>">
-        <input type="search" class="input-text search-form-input" value="<?php echo get_search_query(true) ?>" name="s" placeholder="<?php _e('Search here...', 'wpgens'); ?>" required />
-    </form>
+        </div>
+    </header>

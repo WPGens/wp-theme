@@ -2,6 +2,17 @@ module.exports = {
 	content: ["./**/*.php", "./**/*.html"],
 	prefix: "tw-",
 	theme: {
+		container: {
+			center: true,
+			padding: "1rem",
+			screens: {
+				sm: "640px",
+				md: "768px",
+				lg: "1024px",
+				xl: "1280px",
+				"2xl": "var(--width-site)",
+			},
+		},
 		extend: {
 			colors: {
 				primary: {
@@ -28,8 +39,8 @@ module.exports = {
 			},
 			maxWidth: {
 				screen: "1496px",
-				site: "1224px",
-				"site-small": "816px",
+				site: "var(--width-site)",
+				"site-small": "var(--width-site-small)",
 			},
 			fontSize: {
 				"display-1": ["56px", "60px"],
