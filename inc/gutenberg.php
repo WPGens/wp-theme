@@ -12,7 +12,7 @@ function wpgens_gutenberg_setup()
         array(
             'name'  => __('Secondary', 'wpgens'),
             'slug'  => 'secondary',
-            'color' => '#404041',
+            'color' => '#171f28',
         ),
         array(
             'name'  => __('Primary 100', 'wpgens'),
@@ -81,19 +81,6 @@ function wpgens_gutenberg_setup()
 }
 add_action('after_setup_theme', 'wpgens_gutenberg_setup');
 
-function wpgens_block_assets()
-{
-    wp_enqueue_style('wpgens-blocks-style', get_theme_file_uri('/assets/css/blocks.css'), array(), wp_get_theme()->get('Version'));
-}
-add_action('enqueue_block_assets', 'wpgens_block_assets');
-
-function wpgens_block_editor_assets()
-{
-    wp_enqueue_style('editor-css', get_stylesheet_directory_uri() . '/assets/css/editor-style.css', array(), wp_get_theme()->get('Version'));
-}
-add_action('enqueue_block_editor_assets', 'wpgens_block_editor_assets');
-
-
 function my_custom_block_styles()
 {
     register_block_style(
@@ -121,3 +108,20 @@ function my_custom_block_styles()
     );
 }
 add_action('init', 'my_custom_block_styles');
+
+// Enqueue Tailwind CSS in gutenberg editor
+function wpgens_editor_styles()
+{
+    wp_enqueue_style('lasvegas-tailwind-css', get_stylesheet_directory_uri() . '/assets/css/tailwind.css', null, WPGENS_THEME_VERSION, 'all');
+}
+add_action('enqueue_block_editor_assets', 'wpgens_editor_styles');
+
+// Disable Gutenberg for events and posts
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    // Use your post type key instead of 'product'
+    if ($post_type === 'events') return false;
+    if ($post_type === 'post') return false;
+    return $current_status;
+}

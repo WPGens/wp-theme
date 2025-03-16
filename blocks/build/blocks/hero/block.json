@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wpgens/hero",
+  "title": "WPGens Hero",
+  "category": "wpgens",
+  "icon": "cover-image",
+  "description": "Add a hero section with background image, title, subtitle, and button.",
+  "textdomain": "wpgens-blocks",
+  "supports": {
+    "html": false,
+    "align": [
+      "full",
+      "wide"
+    ]
+  },
+  "attributes": {
+    "backgroundImage": {
+      "type": "object",
+      "default": {
+        "url": "",
+        "id": 0,
+        "alt": ""
+      }
+    },
+    "height": {
+      "type": "string",
+      "default": "full"
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "LEARN MORE"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonBackgroundColor": {
+      "type": "string",
+      "default": "#1a1a1a"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.4)"
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 40
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

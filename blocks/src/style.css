@@ -1,0 +1,93 @@
+/* This file will load style for blocks, it will load on both frontend and backend */
+
+:root {
+	--width-site: 1224px;
+	--width-site-small: 816px;
+	--side-margin: 24px;
+}
+
+.hero-btn {
+	@apply bg-primary text-white px-8 py-4 rounded-full hover:bg-primary/90 transition-colors;
+}
+
+.wp-block-group {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+.is-style-container {
+	max-width: var(--width-site);
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+}
+.is-style-full-width {
+	max-width: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+.is-style-small-container {
+	max-width: var(--width-site-small);
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+}
+
+/* Columns padding variants */
+.wp-block-columns.is-style-padding-small {
+	padding-top: var(--side-margin);
+	padding-bottom: var(--side-margin);
+}
+
+.wp-block-columns.is-style-padding-large {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+/* Fix Default Gutenberg styles */
+
+:where(.wp-block-columns) {
+	margin-bottom: 0;
+}
+.wp-block-image {
+	margin-bottom: 18px;
+}
+.wp-block-cover,
+.wp-block-cover-image {
+	padding: 0;
+}
+.wp-block-columns {
+	width: 100%;
+}
+.wp-block-group {
+	padding: 0;
+}
+.wp-block-image .alignleft {
+	margin: 0;
+}
+.wp-block-separator {
+	margin-top: 6px;
+}
+.wp-block-media-text__content h2,
+.wp-block-media-text__content h3 {
+	margin-bottom: 0;
+}
+.wp-block-cover__inner-container {
+	padding: 0 24px;
+}
+:where(.wp-block-columns.is-layout-flex) {
+	gap: 48px !important;
+}
+:where(.wp-block-columns.is-layout-flex.gap-24) {
+	gap: 24px !important;
+}
+.entry-content > .wp-block-group {
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
+
+/* When pargraph has inline image - add with-image class */
+.with-image img {
+	margin-left: 2px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}

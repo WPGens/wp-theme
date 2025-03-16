@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wpgens/image-text",
+  "title": "WPGens Image & Text",
+  "category": "wpgens",
+  "icon": "align-pull-left",
+  "description": "Add a section with an image on one side and content on the other.",
+  "textdomain": "wpgens-blocks",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "mediaId": {
+      "type": "number"
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imagePosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "verticalAlignment": {
+      "type": "string",
+      "default": "center"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

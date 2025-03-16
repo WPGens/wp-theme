@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpgens/venues",
+  "version": "0.1.0",
+  "title": "Venues",
+  "category": "wpgens",
+  "icon": "store",
+  "description": "Display a grid of selected venues.",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "selectedVenues": {
+      "type": "array",
+      "default": []
+    },
+    "title": {
+      "type": "string",
+      "default": "Popular Venues"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "wpgens-blocks",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

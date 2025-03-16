@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpgens-blocks/faq",
+  "version": "0.1.0",
+  "title": "FAQ Section",
+  "category": "wpgens",
+  "icon": "editor-help",
+  "description": "Add a FAQ section with title, subtitle and expandable questions.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Frequently Asked Questions"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "faqs": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "wpgens-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

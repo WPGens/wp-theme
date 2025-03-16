@@ -1,0 +1,49 @@
+/**
+ * Button block styles
+ */
+.wpgens-button {
+    display: inline-block;
+    margin-bottom: 1em;
+    background: none !important;
+    color: inherit !important;
+    
+    a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: var(--wpgens-button-bg-color);
+        color: var(--wpgens-button-text-color);
+        
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    }
+    
+    // Size variations if needed
+    &-small {
+        a {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+        }
+    }
+    
+    &-medium {
+        a {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+    }
+    
+    &-large {
+        a {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+        }
+    }
+} 

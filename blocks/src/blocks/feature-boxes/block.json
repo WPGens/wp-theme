@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "wpgens/feature-boxes",
+	"version": "0.1.0",
+	"title": "Feature Boxes",
+	"category": "wpgens",
+	"icon": "grid-view",
+	"description": "Display feature boxes in a grid layout with customizable columns",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"columns": {
+			"type": "array",
+			"default": []
+		},
+		"title": {
+			"type": "string",
+			"default": "Featured Content"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Explore our featured content"
+		}
+	},
+	"textdomain": "wpgens-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

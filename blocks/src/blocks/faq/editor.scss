@@ -1,0 +1,43 @@
+.wp-block-wpgens-blocks-faq {
+    .faq-item-editor {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+
+        .components-base-control {
+            margin-bottom: 1rem;
+        }
+
+        .components-button.is-destructive {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .add-faq-button {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bg-gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, #0C1015 0%, rgba(12, 16, 21, 0) 100%);
+    }
+
+    .text-secondary {
+        color: #CFA568;
+    }
+
+    .panel {
+        transition: height 0.3s ease-in-out;
+    }
+
+    .accordion.active + .panel {
+        height: auto;
+    }
+} 

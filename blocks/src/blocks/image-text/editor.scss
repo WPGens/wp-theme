@@ -1,0 +1,101 @@
+/**
+ * Image & Text block editor styles
+ */
+.wp-block-wpgens-image-text {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    // Full width and wide alignment
+    &.alignfull {
+        max-width: none;
+        width: 100%;
+    }
+    
+    &.alignwide {
+        max-width: var(--wp--style--global--wide-size);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // Image position
+    &.align-right {
+        flex-direction: row-reverse;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    
+    // Vertical alignment
+    &.valign-top {
+        align-items: flex-start;
+    }
+    
+    &.valign-center {
+        align-items: center;
+    }
+    
+    &.valign-bottom {
+        align-items: flex-end;
+    }
+    
+    // Media container
+    .wpgens-image-text-media {
+        flex: 0 0 50%;
+        width: 50%;
+        position: relative;
+        
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .wpgens-image-upload {
+            min-height: 300px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            
+            button {
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            
+            &:hover button {
+                opacity: 1;
+            }
+        }
+    }
+    
+    // Content container
+    .wpgens-image-text-content {
+        box-sizing: border-box;
+        flex: 0 0 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+} 

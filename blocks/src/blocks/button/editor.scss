@@ -1,0 +1,34 @@
+/**
+ * Button block editor styles
+ */
+.wp-block-wpgens-button {
+    cursor: pointer;
+    background: none !important;
+    color: inherit !important;
+    
+    span {
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        background: var(--wpgens-button-bg-color);
+        color: var(--wpgens-button-text-color);
+    }
+
+    &.is-style-small span {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    &.is-style-medium span {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    &.is-style-large span {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.125rem;
+    }
+} 

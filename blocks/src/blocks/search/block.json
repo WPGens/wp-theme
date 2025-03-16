@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpgens-blocks/search",
+	"version": "0.1.0",
+	"title": "Event Search",
+	"category": "wpgens",
+	"icon": "search",
+	"description": "Add an event search bar with date, type, and optional city filters.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"showCity": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"textdomain": "wpgens-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

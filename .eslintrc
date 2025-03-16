@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "parser": "babel-eslint",
+    "plugins": ["react", "prettier"],
+    "extends": ["react-app", "airbnb", "prettier", "prettier/react"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": 0,
+        "react/prefer-stateless-function": 0,
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/prefer-default-export": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/label-has-for": [
+            2,
+            {
+                "components": ["Label"],
+                "required": {
+                    "some": ["nesting", "id"]
+                },
+                "allowChildren": false
+            }
+        ],
+        "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft"] }],
+        "jsx-a11y/label-has-associated-control": 0,
+        "no-unused-vars": ["warn", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "react/jsx-props-no-spreading": 0,
+    }
+}

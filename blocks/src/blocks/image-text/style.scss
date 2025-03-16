@@ -1,0 +1,103 @@
+/**
+ * Image & Text block styles
+ */
+.wpgens-image-text {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    // Full width and wide alignment
+    &.alignfull {
+        max-width: none;
+        width: 100%;
+    }
+    
+    &.alignwide {
+        max-width: var(--wp--style--global--wide-size);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    // Image position
+    &.align-right {
+        flex-direction: row-reverse;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    
+    // Vertical alignment
+    &.valign-top {
+        align-items: flex-start;
+    }
+    
+    &.valign-center {
+        align-items: center;
+    }
+    
+    &.valign-bottom {
+        align-items: flex-end;
+    }
+    
+    // Media container
+    &-media {
+        flex: 0 0 50%;
+        width: 50%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+    }
+    
+    // Content container
+    &-content {
+        flex: 0 0 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        
+        @media (max-width: 768px) {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 2rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem;
+            font-weight: 700;
+            
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            
+            @media (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+        
+        .wpgens-button {
+            margin-top: 1rem;
+        }
+    }
+} 

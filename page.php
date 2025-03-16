@@ -1,20 +1,34 @@
-<?php get_header(); ?>
+<?php
 
-<main class="tw-container tw-mx-auto tw-px-4 tw-py-12">
-	<?php while (have_posts()): the_post(); ?>
-	<article id="post-<?php the_ID(); ?>">
-		<?php if (has_post_thumbnail()): ?>
-		<div class="tw-mb-12">
-			<?php the_post_thumbnail('full', ['class' => 'tw-w-full tw-h-auto tw-rounded-lg']); ?>
+/**
+ * The template for displaying all pages
+ *
+ */
+
+get_header(); ?>
+
+<?php
+while (have_posts()) :
+	the_post();
+?>
+
+	<!-- Hero -->
+	<section class="pt-36 pb-24 bg-black relative overflow-hidden min-h-[240px]">
+		<div class="px-12 relative z-10 max-w-7xl m-auto">
+			<h1 class="text-5xl md:text-6xl text-white font-light font-neon uppercase"><?php the_title(); ?></h1>
 		</div>
-		<?php endif; ?>
+	</section>
 
-		<div class="tw-prose tw-prose-lg tw-mx-auto">
-			<?php the_content(); ?>
+	<section class="pt-6 pb-12 px-6">
+		<div class="container m-auto max-w-7xl rounded-2xl overflow-hidden p-8 md:p-12">
+			<div class="flex flex-col md:flex-row md:space-x-4">
+				<div class="content">
+					<?php the_content(); ?>
+				</div>
+			</div>
 		</div>
+	</section>
 
-	</article>
-	<?php endwhile; ?>
-</main>
-
-<?php get_footer(); ?>
+<?php
+endwhile;
+get_footer();

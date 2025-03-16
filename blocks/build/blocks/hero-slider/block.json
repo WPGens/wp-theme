@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpgens/hero-slider",
+  "version": "1.0.0",
+  "title": "Hero Slider",
+  "category": "wpgens",
+  "icon": "slides",
+  "description": "A full-width hero slider block with multiple slides",
+  "textdomain": "wpgens-blocks",
+  "supports": {
+    "html": false,
+    "align": [
+      "full",
+      "wide"
+    ]
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "slides": {
+      "type": "array",
+      "default": [
+        {
+          "desktopImage": {
+            "url": "",
+            "id": 0,
+            "alt": ""
+          },
+          "mobileImage": {
+            "url": "",
+            "id": 0,
+            "alt": ""
+          },
+          "title": "",
+          "date": "",
+          "place": "",
+          "buttonText": "Buy Tickets",
+          "buttonUrl": ""
+        }
+      ]
+    },
+    "welcomeText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

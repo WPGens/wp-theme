@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpgens/events",
+  "version": "1.0.0",
+  "title": "Events Slider",
+  "category": "wpgens",
+  "icon": "calendar",
+  "description": "A slider block for displaying events",
+  "textdomain": "wpgens-blocks",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "events": {
+      "type": "array",
+      "default": []
+    },
+    "selectedEvents": {
+      "type": "array",
+      "default": []
+    },
+    "viewAllUrl": {
+      "type": "string",
+      "default": "/events/"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

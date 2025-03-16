@@ -1,0 +1,51 @@
+.wp-block-wpgens-feature-boxes {
+  .feature-boxes-editor {
+    .image-preview-wrapper {
+      margin-bottom: 10px;
+      
+      img.image-preview {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+      }
+
+      .image-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+
+        button {
+          flex: 1;
+        }
+      }
+    }
+    
+    .add-column-button {
+      margin-top: 16px;
+      width: 100%;
+    }
+    
+    .remove-column-button {
+      margin-top: 16px;
+      width: 100%;
+    }
+    
+    .feature-boxes-grid {
+      @media (min-width: 768px) {
+        flex-wrap: wrap;
+        gap: 2rem;
+        
+        > div {
+          flex: 0 0 calc(50% - 1rem);
+          margin-right: 0 !important;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        > div {
+          flex: 0 0 calc(33.333% - 1rem);
+        }
+      }
+    }
+  }
+} 

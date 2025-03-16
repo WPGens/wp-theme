@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "wpgens/button",
+	"title": "WPGens Button",
+	"category": "wpgens",
+	"icon": "button",
+	"description": "Add a customizable button.",
+	"textdomain": "wpgens-blocks",
+	"supports": {
+		"html": false,
+		"align": ["left", "center", "right"]
+	},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Click me"
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#0073aa"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 4
+		},
+		"size": {
+			"type": "string",
+			"default": "medium"
+		},
+		"align": {
+			"type": "string",
+			"default": "none"
+		},
+		"openInNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

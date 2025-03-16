@@ -70,3 +70,13 @@ function theme_current_type_nav_class($css_class, $item)
     return $css_class;
 }
 add_filter('nav_menu_css_class', 'theme_current_type_nav_class', 1, 2);
+
+
+function add_menu_link_class($atts, $item, $args)
+{
+    if (property_exists($args, 'link_class')) {
+        $atts['class'] = $args->link_class;
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
