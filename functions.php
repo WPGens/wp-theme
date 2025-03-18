@@ -13,7 +13,5 @@ require_once WPGENS_THEME_DIR . '/inc/enqueue.php';
 require_once WPGENS_THEME_DIR . '/inc/post-metas.php';
 require_once WPGENS_THEME_DIR . '/inc/widgets.php';
 require_once WPGENS_THEME_DIR . '/inc/gutenberg.php';
-require_once WPGENS_THEME_DIR . '/inc/data-helpers.php';
-require_once WPGENS_THEME_DIR . '/inc/template-helpers.php';
 
 require_once WPGENS_THEME_DIR . '/blocks/wpgens-blocks.php';

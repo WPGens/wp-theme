@@ -64,7 +64,7 @@ function wpgens_gutenberg_setup()
     add_theme_support('editor-font-sizes', array(
         array(
             'name' => __('Small', 'wpgens'),
-            'size' => 12,
+            'size' => 14,
             'slug' => 'small'
         ),
         array(

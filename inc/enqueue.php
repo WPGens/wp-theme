@@ -17,16 +17,5 @@ function wpgens_enqueue_google_fonts()
     wp_enqueue_style('google');
 }
 add_action('wp_enqueue_scripts', 'wpgens_enqueue_google_fonts');
+// Load Open sans font in admin for gutenberg editor
 add_action('admin_init', 'wpgens_enqueue_google_fonts');
-
-function enqueue_media_uploader()
-{
-    wp_enqueue_media();
-
-    // If select2 is needed
-    if (is_admin()) {
-        wp_enqueue_script('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js', array('jquery'), '4.0.13', true);
-        wp_enqueue_style('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css', array(), '4.0.13');
-    }
-}
-// add_action( 'admin_enqueue_scripts', 'enqueue_media_uploader' );
