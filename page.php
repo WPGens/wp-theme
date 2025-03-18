@@ -13,7 +13,7 @@ while (have_posts()) :
 ?>
 
 <!-- Hero -->
-<section class="tw-pt-36 tw-pb-24 tw-bg-black tw-relative tw-overflow-hidden tw-min-h-[240px]">
+<section class="tw-pt-16 tw-pb-16 tw-bg-black tw-relative tw-overflow-hidden">
 	<div class="tw-px-12 tw-relative tw-z-10 tw-max-w-7xl tw-m-auto">
 		<h1 class="tw-text-5xl md:tw-text-6xl tw-text-white tw-font-light tw-font-neon tw-uppercase">
 			<?php the_title(); ?></h1>
