@@ -9,8 +9,8 @@ The theme uses a combination of Tailwind CSS and custom styles, organized to wor
 ```
 ├── assets/
 │   └── css/
-│       ├── tailwind.css     # Generated Tailwind CSS output
-│       └── theme.css        # Source file for Tailwind
+│       ├── theme.css     # Generated Tailwind CSS output
+│       └── tailwind.css        # Source file for Tailwind
 ├── blocks/
 │   └── src/
 │       ├── style.css       # Global block styles (loaded on front & editor)
@@ -61,8 +61,8 @@ The theme uses a combination of Tailwind CSS and custom styles, organized to wor
 
 ### File Purposes
 
--   `theme.css`: Source file for Tailwind, includes custom styles and Tailwind directives
--   `tailwind.css`: Generated file containing all Tailwind utilities
+-   `tailwind.css`: Source file for Tailwind, includes custom styles and Tailwind directives
+-   `theme.css`: Generated file containing all Tailwind utilities
 -   `blocks/src/style.css`: Global modifications for Gutenberg blocks
 -   `editor.scss`: Block-specific styles that only apply in the editor
 -   `style.scss`: Block-specific styles that apply on the frontend
