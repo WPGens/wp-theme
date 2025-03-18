@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="tw-container tw-mx-auto tw-px-4 tw-py-12">
+<main class="tw-max-w-5xl tw-mx-auto tw-px-4 tw-py-12">
 	<?php while (have_posts()): the_post(); ?>
 	<article id="post-<?php the_ID(); ?>">
 		<header class="tw-text-center tw-mb-12">

@@ -722,6 +722,10 @@ video {
   max-width: 80rem;
 }
 
+.tw-max-w-5xl {
+  max-width: 64rem;
+}
+
 .tw-flex-shrink-0 {
   flex-shrink: 0;
 }
